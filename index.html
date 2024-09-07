@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kejutan untuk Eci</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .hidden {
+            display: none;
+        }
+        .show {
+            display: block;
+        }
+        #lyrics {
+            margin-top: 20px;
+            font-size: 1.2em;
+            white-space: pre-wrap;
+            color: #333;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+        .word {
+            opacity: 0;
+            display: inline-block;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        /* Gaya untuk video latar belakang */
+        #backgroundVideo {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1; /* Pastikan video berada di belakang konten */
+            filter: brightness(70%); /* Opsional: gelapkan video untuk kontras lebih baik */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Video latar belakang -->
+    <video autoplay muted loop id="backgroundVideo">
+        <source src="vidio.mp4" type="video/mp4">
+    </video>
+
+    <div class="container">
+        <h1>Untuk kesayanganku cantikkuu, ciaa</h1>
+        <p>Klik tombol di bawah untuk melihat sesuatu yang spesial!</p>
+        <button id="revealButton">cantikku!</button>
+        <div id="photoGallery" class="gallery">
+            <img src="cia1.jpeg" alt="Eci Photo 1" class="hidden">
+            <img src="cia2.jpeg" alt="Eci Photo 2" class="hidden">
+            <img src="cia3.jpeg" alt="Eci Photo 3" class="hidden">
+            <img src="cia4.jpeg" alt="Eci Photo 4" class="hidden">
+            <img src="cia5.jpeg" alt="Eci Photo 5" class="hidden">
+            <img src="cia6.jpeg" alt="Eci Photo 5" class="hidden">
+            <img src="cia7.jpeg" alt="Eci Photo 5" class="hidden">
+            <img src="cia8.jpeg" alt="Eci Photo 5" class="hidden">
+        </div>
+        <div id="lyrics" class="hidden"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

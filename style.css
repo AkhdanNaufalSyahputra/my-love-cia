@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f8f9fa;
+    transition: background 1s ease-in-out; /* Transisi saat background berubah */
+}
+
+.container {
+    margin-top: 50px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #ff6b6b;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ff4d4d;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Awal galeri gambar tersembunyi */
+.hidden {
+    display: none;
+}
+
+/* Efek fade-in untuk gambar */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Style gambar */
+.gallery img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#lyrics {
+    margin-top: 20px;
+    font-size: 1.5em; /* Ukuran font yang lebih besar untuk visibilitas yang lebih baik */
+    white-space: pre-wrap;
+    color: #ffffff; /* Warna putih untuk teks lirik */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7); /* Bayangan teks untuk meningkatkan kontras */
+}
+
+.word {
+    opacity: 0;
+    display: inline-block;
+    transition: opacity 0.5s ease-in-out;
+}
+
+h1, p {
+    color: rgb(151, 236, 53);
+}
